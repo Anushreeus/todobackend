@@ -9,7 +9,7 @@ app.use(cors())
 
 // let todos = [];
 //connecting mongodb
-mongoose.connect('mongodb://localhost:27017/mern-app')
+mongoose.connect('mongodb+srv://anushree:root@cluster0.kcxhyhk.mongodb.net/mern-app')
 .then(() =>{
     console.log('DB Connected!')
 })
