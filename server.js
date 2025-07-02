@@ -5,7 +5,8 @@ const cors = require('cors')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = "babysecret"; 
-// 🔐 JWT Verify Middleware
+
+// JWT Verify Middleware
 const verifyToken = (req, res, next) => {
     const authHeader = req.headers.authorization;
     if (!authHeader) return res.status(401).json({ message: "Token missing" });
@@ -26,7 +27,7 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
-/mongoose.connect('mongodb+srv://anushree:root@cluster0.kcxyhyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://anushree:root@cluster0.kcxhyhk.mongodb.net/mern-app', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
